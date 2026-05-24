@@ -15,11 +15,14 @@ function App() {
         following: 50
     })
 
+    const changeAvatar = url => {
+        setUser({...user, avatar: url || user.avatar});
+    }
 
     return (
         <div className={'app'}>
             <ShmitterContext value={{
-                user, stats
+                user, stats, changeAvatar
             }}>
                 <Navigation/>
                 <Body/>
