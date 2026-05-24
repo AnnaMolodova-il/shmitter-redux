@@ -16,7 +16,11 @@ function App() {
     })
 
     const changeAvatar = url => {
-        setUser({...user, avatar: url || user.avatar});
+        // setUser({...user, name: 'User'});
+        // setUser({...user, avatar: url || user.avatar});
+
+        // setUser(prevState => ({...prevState, name: 'User'}));
+        setUser(prevState => ({...prevState, avatar: url || prevState.avatar}));
     }
 
     return (
